@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        h1 {
+            font-family: fantasy;
+            color: #000;
+
+            font-size: xx-large;
+
+        }
+
+        td,
+        th {
+            border: 1px solid #200404;
+            text-align: left;
+            padding: 8px;
+        }
+
+        tr:nth-child(even) {
+            background-color: #dddddd85;
+        }
+
+        body {
+            background: url(https://imagesvc.timeincapp.com/v3/mm/image?url=https%3A%2F%2Fcdn-image.travelandleisure.com%2Fsites%2Fdefault%2Ffiles%2Fstyles%2F1600x1000%2Fpublic%2F1511281122%2Fflight-landing-INBNDCHECK1117.jpg%3Fitok%3DrlElho3R&w=700&q=85);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            margin: 0;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 90%;
+        }
+
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            width: 10%;
+            background-color: transparent;
+            position: fixed;
+            height: 100%;
+            overflow: auto;
+
+        }
+
+        div {
+            margin-left: 25%;
+            padding: 1px 8px;
+            height: 500px;
+            margin-right: 25%;
+
+        }
+
+        li a {
+            display: block;
+            color: #000;
+            padding: 8px 16px;
+            text-decoration: none;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
+        }
+
+        li a.active {
+            background-color: rgb(33, 41, 33);
+            color: rgb(255, 255, 255);
+        }
+
+        li a:hover:not(.active) {
+            background-color: #555;
+            color: rgb(255, 251, 251);
+        }
+
+        .container {
+            border-radius: 5px;
+            background-color: #f2f2f2;
+            padding: 20px;
+            height: fit-content;
+        }
+
+        input[type=text],
+        [type=time] {
+            width: 30%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            resize: vertical;
+        }
+
+        input[type=time] {
+            width: 20%;
+            padding: 6px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            resize: vertical;
+        }
+
+        label {
+            padding: 6px 6px 6px 0;
+            display: inline-block;
+            font-style: italic;
+        }
+
+        h3 {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            font-size: large;
+            color: rgb(34, 10, 10);
+            background-color: cyan;
+        }
+
+
+        #pnr,
+        #gender,
+        #name,
+        #amt {
+            width: 80%;
+            padding: 5px;
+
+        }
+
+
+
+        #passengerid {
+            width: 90%;
+            padding: 5px;
+        }
+
+        #age {
+            width: 50%;
+            padding: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <u>
+        <center>
+            <h1>Airline Refund System</h1>
+    </u>
+    </center>
+    <ul>
+        <h3>Screens</h3>
+        <li>
+            <a href="Home.html">Home</a>
+        </li>
+        <li>
+            <a href="Customer.html">Customer</a>
+        </li>
+        <li>
+            <a href="Flight.html">Flight </a>
+        </li>
+        <li>
+            <a href="City.html">City</a>
+        </li>
+        <li>
+            <a href="Flight Schedule.html">Flight Schedule </a>
+        </li>
+        <li>
+            <a class="active" href="Booking.html">Booking</a>
+        </li>
+        <li>
+            <a href="Booking Cancellation.html">Booking Cancellation</a>
+        </li>
+        <li>
+            <a href="Refund Rules.html">Refund Rules</a>
+        </li>
+        <h3>Reports</h3>
+        <li>
+            <a href="customerrefund.html">Customer Refund</a>
+
+        </li>
+        <li>
+            <a href="periodwise.html">Periodwise Refund Given</a>
+
+        </li>
+    </ul>
+    <div class="container">
+        <form action="booking.php" method="post">
+
+            <label for="Booking ID">Booking ID</label>
+
+            <input type="text" name="bookingid" placeholder="Booking ID">
+            <br>
+            <label for="Flight Schedule ID">Flight Schedule ID</label>
+
+            <input type="text" name="flightscid" placeholder="Flight Schedule ID">
+            <br>
+            <label for="Departure Time">Departure Time</label>
+            <input type="text" name="departuretime">
+            <label for="Arrival Time">Arrival Time</label>
+            <input type="text" name="arrivaltime">
+
+            <br>
+            <label for="fromcity">From City</label>
+
+            <input type="text" name="fromcity" placeholder="From">
+            <label for="tocity">To City</label>
+
+            <input type="text" name="tocity" placeholder="To">
+            <br>
+            <label for="Customer ID">Customer ID</label>
+
+            <input type="text" name="custid" placeholder="Your Customer ID">
+
+
+            <br>
+            <label for="Customer Name">Customer Name</label>
+
+            <input type="text" name="custname" placeholder="Customer Name">
+            <br>
+            <label for="Total Amt">Total Amount</label>
+
+            <input type="text" name="totalamt">
+            <br>
+            <br>
+            <br>
+            <table>
+                <tr>
+                    <th>PNR</th>
+                    <th>BookingID</th>
+                    <th>Name</th>
+                    <th>Age</th>
+                    <th>Gender</th>
+                    <th>Amt</th>
+                </tr>
+
+                <tr>
+                    <td>
+                        <input type="text" name="pnr1" id="pnr"> </td>
+                    <td>
+                        <input type="text" name="booking1" id="pnr"> </td>
+
+
+                    <td>
+                        <input type="text" name="name1" id="name">
+                    </td>
+                    <td>
+                        <input type="text" name="age1" id="age">
+                    </td>
+                    <td>
+                        <input type="text" name="gender1" id="gender">
+                    </td>
+                    <td>
+                        <input type="text" name="amt1" id="amt">
+                    </td>
+
+
+                </tr>
+                <tr>
+                    <td>
+                        <input type="text" name="pnr2" id="pnr"> </td>
+
+
+                    <td>
+                        <input type="text" name="booking2" id="pnr"> </td>
+                    <td>
+                        <input type="text" name="name2" id="name">
+                    </td>
+                    <td>
+                        <input type="text" name="age2" id="age">
+                    </td>
+                    <td>
+                        <input type="text" name="gender2" id="gender">
+                    </td>
+                    <td>
+                        <input type="text" name="amt2" id="amt">
+                    </td>
+
+
+                </tr>
+                <tr>
+                    <td>
+                        <input type="text" name="pnr3" id="pnr"> </td>
+                    <td>
+                        <input type="text" name="booking3" id="pnr"> </td>
+
+                    <td>
+                        <input type="text" name="name3" id="name">
+                    </td>
+                    <td>
+                        <input type="text" name="age3" id="age">
+                    </td>
+                    <td>
+                        <input type="text" name="gender3" id="gender">
+                    </td>
+                    <td>
+                        <input type="text" name="amt3" id="amt">
+                    </td>
+
+
+                </tr>
+            </table>
+            <br>
+            <input type="submit" value="New" id="new">
+
+            <input type="submit" value="Edit" id="edit">
+
+            <input type="submit" value="Delete" id="delete">
+            <input type="submit" value="Save" id="save">
+            <input type="submit" value="Ok" id="ok">
+
+            <input type="submit" value="Cancel" id="cancel">
+
+
+
+
+        </form>
+    </div>
+
+
+</body>
+
+</html>

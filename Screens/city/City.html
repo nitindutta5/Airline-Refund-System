@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        h1 {
+            font-family: fantasy;
+            color: #000;
+
+            font-size: xx-large;
+
+        }
+
+        body {
+            background: url(https://imagesvc.timeincapp.com/v3/mm/image?url=https%3A%2F%2Fcdn-image.travelandleisure.com%2Fsites%2Fdefault%2Ffiles%2Fstyles%2F1600x1000%2Fpublic%2F1511281122%2Fflight-landing-INBNDCHECK1117.jpg%3Fitok%3DrlElho3R&w=700&q=85);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            margin: 0;
+        }
+
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            width: 10%;
+            background-color: transparent;
+            position: fixed;
+            height: 100%;
+            overflow: auto;
+
+        }
+
+        div {
+            margin-left: 25%;
+            padding: 1px 8px;
+            height: 500px;
+            margin-right: 25%;
+
+        }
+
+        li a {
+            display: block;
+            color: #000;
+            padding: 8px 16px;
+            text-decoration: none;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
+        }
+
+        li a.active {
+            background-color: rgb(33, 41, 33);
+            color: rgb(255, 255, 255);
+        }
+
+        li a:hover:not(.active) {
+            background-color: #555;
+            color: rgb(255, 251, 251);
+        }
+
+        .container {
+            border-radius: 5px;
+            background-color: #f2f2f2;
+            padding: 20px;
+            height: fit-content;
+        }
+
+
+        input[type=text],
+        select,
+        textarea {
+            width: 90%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            resize: vertical;
+        }
+
+        label {
+            padding: 6px 6px 6px 0;
+            display: inline-block;
+            font-style: italic;
+        }
+
+        h3 {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            font-size: large;
+            color: rgb(34, 10, 10);
+            background-color: cyan;
+        }
+    </style>
+</head>
+
+<body>
+    <u>
+        <center>
+            <h1>Airline Refund System</h1>
+    </u>
+    </center>
+    <ul>
+        <h3>Screens</h3>
+        <li>
+            <a href="Home.html">Home</a>
+        </li>
+        <li>
+            <a href="Customer.html">Customer</a>
+        </li>
+        <li>
+            <a href="Flight.html">Flight </a>
+        </li>
+        <li>
+            <a class="active" href="City.html">City</a>
+        </li>
+        <li>
+            <a href="Flight Schedule.html">Flight Schedule </a>
+        </li>
+        <li>
+            <a href="Booking.html">Booking</a>
+        </li>
+        <li>
+            <a href="Booking Cancellation.html">Booking Cancellation</a>
+        </li>
+        <li>
+            <a href="Refund Rules.html">Refund Rules</a>
+        </li>
+        <h3>Reports</h3>
+        <li>
+            <a href="customerrefund.html">Customer Refund</a>
+
+        </li>
+        <li>
+            <a href="periodwise.html">Periodwise Refund Given</a>
+
+        </li>
+    </ul>
+    <br>
+    <br>
+
+    <br>
+    <br>
+    <br>
+    <br>
+
+    <div class="container">
+        <form action="city.php" method="post">
+
+            <label for="City Code">City Code</label>
+
+            <input type="text" name="citycode" placeholder="City Code">
+
+
+            <input type="text" name="city" placeholder="City">
+            <br>
+            <br>
+
+            <input type="submit" value="Save" id="save">
+            <a href="Flight Schedule.html">
+                <input type="button" value="Next" id="next">
+            </a>
+
+            <a href="City.html">
+                <input type="button" value="Reset" id="reset">
+            </a>
+
+            <input type="button" value="Search" id="search">
+            <a href="Home.html">
+                <input type="button" value="Exit" id="Exit">
+            </a>
+
+
+
+
+
+        </form>
+    </div>
+
+
+    <script>
+
+    </script>
+</body>
+
+</html>
